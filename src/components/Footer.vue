@@ -85,7 +85,7 @@ export default {
           type="text"
           placeholder="enter your email address"
         />
-        <button class="py-2 px-4 shadow-md rounded-md bg-[#46A358] text-white">
+        <button class="py-2 px-4 shadow-md rounded-md bg-[#46A358] text-white font-medium border border-[#46A358] hover:bg-white hover:text-[#46A358] hover:border hover:border-[#46A358]">
           Join
         </button>
       </div>

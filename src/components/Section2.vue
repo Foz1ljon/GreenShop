@@ -37,7 +37,7 @@ export default {
           <p class="text-[#727272] text-sm w-[292px]">
             {{ item.about }}
           </p>
-          <button class="px-3 py-2 rounded-md bg-[#46A358] text-white">
+          <button class="px-3 py-2 rounded-md bg-[#46A358] text-white border border-[#46A358] hover:bg-white hover:text-[#46A358] hover:border hover:border-[#46A358]">
             Find more &rarr;
           </button>
         </div>

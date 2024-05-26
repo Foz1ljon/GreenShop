@@ -64,7 +64,7 @@ export default {
         />
         <p>Price: <b class="text-[#46A358]">$39 - $1230</b></p>
         <button
-          class="px-6 py-2 w-32 uppercase text-sm rounded-lg font-medium text-white bg-[#46A358]"
+          class="px-6 py-2 w-32 uppercase text-sm rounded-lg font-medium  text-white bg-[#46A358] border border-[#46A358] hover:bg-white hover:text-[#46A358] hover:border hover:border-[#46A358]"
         >
           Filter
         </button>
@@ -108,38 +108,37 @@ export default {
       </div>
       <div class="grid grid-cols-3 gap-5">
         <div v-for="(item, index) in products" :key="index">
-  <div
-    class="card flex flex-col gap-2 mb-3 border-t"
-    @mouseover="item.hover = true"
-    @mouseleave="item.hover = false"
-  >
-    <div class="bg-[#FBFBFB] p-5 w-[270px] h-[266px] relative">
-      <img
-        class="bg-cover"
-        :src="item.img"
-        width="250"
-        height="250"
-        alt="img"
-      />
-      <div
-        class="buttons absolute flex gap-4 -bottom-1 left-[30%]"
-        :class="{ 'hidden': !item.hover }"
-      >
-        <button><img src="../assets/cart2.svg" alt="cart" /></button>
-        <button><img src="../assets/like.svg" alt="like" /></button>
-        <button><img src="../assets/search.svg" alt="search" /></button>
-      </div>
-    </div>
+          <div
+            class="card flex flex-col gap-2 mb-3 border-t"
+            @mouseover="item.hover = true"
+            @mouseleave="item.hover = false"
+          >
+            <div class="bg-[#FBFBFB] p-5 w-[270px] h-[266px] relative">
+              <img
+                class="bg-cover"
+                :src="item.img"
+                width="250"
+                height="250"
+                alt="img"
+              />
+              <div
+                class="buttons absolute flex gap-4 -bottom-1 left-[30%]"
+                :class="{ hidden: !item.hover }"
+              >
+                <button><img src="../assets/cart2.svg" alt="cart" /></button>
+                <button><img src="../assets/like.svg" alt="like" /></button>
+                <button><img src="../assets/search.svg" alt="search" /></button>
+              </div>
+            </div>
 
-    <div>
-      <h1 class="text-lg text-[#3D3D3D]">{{ item.title }}</h1>
-      <p>
-        <b class="text-[#46A358]">${{ item.price }}</b>
-      </p>
-    </div>
-  </div>
-</div>
-
+            <div>
+              <h1 class="text-lg text-[#3D3D3D]">{{ item.title }}</h1>
+              <p>
+                <b class="text-[#46A358]">${{ item.price }}</b>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

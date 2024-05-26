@@ -22,7 +22,7 @@ export default {
       </div>
 
       <button
-        class="w-36 py-2 uppercase text-sm rounded-lg font-medium text-white bg-[#46A358]"
+        class="px-5 py-2 uppercase text-sm rounded-lg font-medium text-white bg-[#46A358] border border-[#46A358] hover:bg-white hover:text-[#46A358] hover:border hover:border-[#46A358]"
       >
         shop now
       </button>
