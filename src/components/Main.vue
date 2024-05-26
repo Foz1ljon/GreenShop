@@ -6,7 +6,7 @@ export default {
 
 <template>
   <div class="grid grid-cols-2 items-center pl-8 gap-28 bg-[#FBFBFB]">
-    <div class="flex flex-col  w-[600px] items-start gap-10">
+    <div class="flex flex-col w-[600px] items-start gap-10">
       <div>
         <h2 class="text-[#3D3D3D] text-base tracking-wider uppercase">
           Welcome to GreenShop
@@ -21,12 +21,16 @@ export default {
         </p>
       </div>
 
-      <button class="w-36 py-2 uppercase text-sm rounded-lg font-medium text-white bg-[#46A358]">shop now</button>
+      <button
+        class="w-36 py-2 uppercase text-sm rounded-lg font-medium text-white bg-[#46A358]"
+      >
+        shop now
+      </button>
     </div>
     <div class="w-[530px] p-2">
-      <div class="relative ">
-        <img src="/public/img-big.png" alt="big">
-        <img class="absolute w-[30%] bottom-9" src="/public/img-mini.png" alt="mini">
+      <div class="relative">
+        <img src="/img-big.png" alt="big" />
+        <img class="absolute w-[30%] bottom-9" src="/img-mini.png" alt="mini" />
       </div>
     </div>
   </div>
