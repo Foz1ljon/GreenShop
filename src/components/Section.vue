@@ -122,11 +122,11 @@ export default {
                 alt="img"
               />
               <div
-                class="buttons absolute flex gap-4 -bottom-1 left-[30%]"
+                class="buttons absolute flex gap-4 bottom-[1px] left-[30%]"
                 :class="{ hidden: !item.hover }"
               >
                 <button><img src="../assets/cart2.svg" alt="cart" /></button>
-                <button><img src="../assets/like.svg" alt="like" /></button>
+                <button  ><img src="../assets/like.svg" alt="like" /></button>
                 <button><img src="../assets/search.svg" alt="search" /></button>
               </div>
             </div>
