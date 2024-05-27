@@ -109,7 +109,7 @@ export default {
       <div class="grid grid-cols-3 gap-5">
         <div v-for="(item, index) in products" :key="index">
           <div
-            class="card flex flex-col gap-2 mb-3 border-t"
+            class="card flex flex-col gap-2 mb-3 border-t border-t-[#FBFBFB] hover:border-t-[#46A358]"
             @mouseover="item.hover = true"
             @mouseleave="item.hover = false"
           >
