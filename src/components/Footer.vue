@@ -62,9 +62,9 @@ export default {
 
 <template>
   <div
-    class="w-[1180px] flex items-center justify-between py-4 px-3 mt-36 bg-[#FBFBFB]"
+    class="w-full flex flex-wrap items-center justify-between py-4 px-3 mt-36 bg-[#FBFBFB]"
   >
-    <div class="grid grid-cols-3 divide-x gap-2">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 divide-x gap-2 ">
       <div v-for="(item, index) in arr" class="cards">
         <div class="flex flex-col h-[201px] p-1 gap-1 px-4">
           <div class="img"><img :src="item.img" alt="" /></div>
@@ -96,7 +96,7 @@ export default {
       </p>
     </div>
   </div>
-  <div class="w-[1180px] bg-[#46A3581A] flex gap-14 py-10 items-center">
+  <div class="w-full bg-[#46A3581A] flex gap-14 py-10 items-center">
     <div class="log"></div>
     <div><img src="../assets/logo.svg" alt="logo" /></div>
     <div class="flex items-center gap-1 w-[200px]">
@@ -114,7 +114,7 @@ export default {
       <p class="text-sm font-normal text-[#3d3d3d]">+88 01911 717 490</p>
     </div>
   </div>
-  <div class="w-[1180px] p-3 flex gap-36 items-center bg-[#FBFBFB]">
+  <div class="w-full p-3 flex gap-36 items-center bg-[#FBFBFB]">
     <div class="grid grid-cols-3 gap-36">
       <div v-for="item in footers">
         <h1 class="text-lg font-bold text-[#3D3D3D] mb-1">{{ item.title }}</h1>

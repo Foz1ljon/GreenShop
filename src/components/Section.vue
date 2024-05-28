@@ -40,7 +40,7 @@ export default {
 <template>
   <div class="flex gap-10 my-5">
     <div
-      class="l w-[310px] h-[1050px] bg-[#FBFBFB] py-3 px-5 flex flex-col gap-8"
+      class="l xl:h-[165vh] bg-[#FBFBFB] py-3 px-2 flex flex-col gap-8 md:block sm:hidden"
     >
       <div class="flex flex-col gap-2">
         <h1 class="text-xl font-extrabold text-[#3d3d3d]">Categories</h1>
@@ -49,8 +49,10 @@ export default {
             :key="index"
             class="flex justify-between focus:text-[#46A358]"
             href="#c"
-            ><p>{{ item.title }}</p>
-            <p>({{ item.count }})</p></a
+            ><p class="xl:text-base lg:text-sm md:text-xs">{{ item.title }}</p>
+            <p class="xl:text-base lg:text-sm md:text-xs">
+              ({{ item.count }})
+            </p></a
           >
         </div>
       </div>
@@ -62,9 +64,14 @@ export default {
           type="range"
           min="2"
         />
-        <p>Price: <b class="text-[#46A358]">$39 - $1230</b></p>
+        <p>
+          Price:
+          <b class="text-[#46A358] xl:text-base lg:text-sm md:text-xs"
+            >$39 - $1230</b
+          >
+        </p>
         <button
-          class="px-6 py-2 w-32 uppercase text-sm rounded-lg font-medium  text-white bg-[#46A358] border border-[#46A358] hover:bg-white hover:text-[#46A358] hover:border hover:border-[#46A358]"
+          class="px-6 py-2 w-32 uppercase text-sm rounded-lg font-medium text-white bg-[#46A358] border border-[#46A358] hover:bg-white hover:text-[#46A358] hover:border hover:border-[#46A358]"
         >
           Filter
         </button>
@@ -90,44 +97,43 @@ export default {
       </div>
     </div>
 
-    <div class="w-[860px] flex flex-col gap-4">
-      <div class="flex justify-between items-center">
-        <div class="flex gap-5">
+    <div class="flex flex-col gap-4 relative">
+      <div class="md:flex md:justify-between md:items-center">
+        <div class="flex md:gap-5 sm:gap-8">
           <div v-for="(item, index) in categories_title">
             <a
-              class="text-[17px] focus:border-b-4 focus:border-[#46A358] focus:mb-2 focus:text-[#46A358]"
+              class="lg:text-base md:text-xs focus:border-b-4 focus:border-[#46A358] focus:mb-2 focus:text-[#46A358]"
               href="#c"
               :key="index"
               >{{ item }}</a
             >
           </div>
         </div>
-        <div class="sort">
-          <p>Short by: Default sorting</p>
-        </div>
+
+        <p class="sm:hidden md:block lg:text-base md:text-xs">
+          Short by: Default sorting
+        </p>
       </div>
-      <div class="grid grid-cols-3 gap-5">
+      <div
+        class="grid lg:grid-cols-3 md:grid-cols-2 gap-5 sm:grid-cols-2 sm:grid-rows-4"
+      >
         <div v-for="(item, index) in products" :key="index">
           <div
             class="card flex flex-col gap-2 mb-3 border-t border-t-[#FBFBFB] hover:border-t-[#46A358]"
             @mouseover="item.hover = true"
             @mouseleave="item.hover = false"
           >
-            <div class="bg-[#FBFBFB] p-5 w-[270px] h-[266px] relative">
-              <img
-                class="bg-cover"
-                :src="item.img"
-                width="250"
-                height="250"
-                alt="img"
-              />
+            <div
+              class="md:bg-[#FBFBFB] md:p-5 sm:bg-[#F4F4F4] sm:rounded-2xl relative"
+            >
+              <img class="bg-cover" :src="item.img" alt="img" />
               <div
                 class="buttons absolute flex gap-4 bottom-[1px] left-[30%]"
                 :class="{ hidden: !item.hover }"
               >
                 <button><img src="../assets/cart2.svg" alt="cart" /></button>
-                <button  ><img src="../assets/like.svg" alt="like" /></button>
                 <button><img src="../assets/search.svg" alt="search" /></button>
+                <button><img src="../assets/like.svg" alt="like" /></button>
               </div>
             </div>
 
@@ -140,16 +146,17 @@ export default {
           </div>
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="flex gap-3 justify-end mb-4">
-    <div v-for="(item, index) in btns" :key="index">
-      <button
-        class="px-2 py-1 border rounded-md focus:bg-[#46A358] focus:text-white"
+      <div
+        class="sm:hidden md:flex flex gap-3 justify-end absolute md:bottom-[60px] lg:bottom-[200px] xl:bottom-calc-100%-5 right-1"
       >
-        {{ item }}
-      </button>
+        <div v-for="(item, index) in btns" :key="index">
+          <button
+            class="px-2 py-1 border rounded-md focus:bg-[#46A358] focus:text-white"
+          >
+            {{ item }}
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </template>
