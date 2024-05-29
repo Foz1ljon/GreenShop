@@ -6,7 +6,14 @@ export default {
       center: true,
       padding: "40px",
     },
-    extend: {},
+    extend: {
+      inset: {
+        "calc-100%-5": "calc(100% / 5)",
+      },
+      screens: {
+        sm: "410px",
+      },
+    },
   },
   plugins: [],
 };
