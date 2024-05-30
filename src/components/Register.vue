@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-col items-center">
+  <div v-if="content == 'register'" class="flex flex-col items-center">
     <div class="flex flex-col items-center mt-9 gap-5">
       <div class="flex justify-start w-[280px] px-1">
-        <h1 class="text-[12px] text-start font-normal text-[#3d3d3d]">
+        <h1 class="text-[12px] text-start font-normal text-[3d3d3d]">
           Register
         </h1>
       </div>
@@ -31,22 +31,22 @@
 
     <div class="flex flex-col gap-2 items-center mt-2">
       <button class="w-[280px] py-1.5 px-3 bg-[#46A358] rounded-md text-white">
-        Register
+        Login
       </button>
       <div class="flex justify-center gap-5 items-center">
         <img src="../assets/line.svg" width="85" alt="line" />
-        <p class="text-sm text-[#3d3d3d]">Or register with</p>
+        <p class="text-sm text-[#3d3d3d]">Or login with</p>
         <img src="../assets/line.svg" width="85" alt="line" />
       </div>
       <button
         class="w-[280px] py-1.5 px-3 border rounded-md flex gap-1 justify-center items-center"
       >
-        <img src="../assets/g.svg" alt="Google" /> Register with Google
+        <img src="../assets/g.svg" alt="Google" /> Login with Google
       </button>
       <button
         class="w-[280px] py-1.5 px-3 border rounded-md flex justify-center items-center gap-1"
       >
-        <img src="../assets/ff.svg" alt="Facebook" /> Register with Facebook
+        <img src="../assets/ff.svg" alt="Facebook" /> Login with Facebook
       </button>
     </div>
   </div>
@@ -56,6 +56,9 @@
 export default {
   name: "Register",
   props: {
+    content: {
+      type: String,
+    },
     emailPlaceholder: {
       type: String,
       default: "Enter your email",
