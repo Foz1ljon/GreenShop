@@ -38,10 +38,8 @@ export default {
 </script>
 
 <template>
-  <div class="flex gap-10 my-5">
-    <div
-      class="l xl:h-[165vh] bg-[#FBFBFB] py-3 px-2 flex flex-col gap-8 md:block sm:hidden"
-    >
+  <div class="flex gap-10 my-3 mt-6">
+    <div class="bg-[#FBFBFB] py-3 px-2 flex flex-col gap-8 md:block sm:hidden">
       <div class="flex flex-col gap-2">
         <h1 class="text-xl font-extrabold text-[#3d3d3d]">Categories</h1>
         <div v-for="(item, index) in categories">
@@ -60,7 +58,7 @@ export default {
       <div class="flex flex-col gap-2">
         <h1 class="text-xl font-extrabold text-[#3d3d3d]">Price Range</h1>
         <input
-          class="bg-green-500 appearance-none h-1 w-full rounded-lg"
+          class="bg-green-500 h-1 w-full rounded-lg"
           type="range"
           min="2"
         />
@@ -115,7 +113,7 @@ export default {
         </p>
       </div>
       <div
-        class="grid lg:grid-cols-3 md:grid-cols-2 gap-5 sm:grid-cols-2 sm:grid-rows-4"
+        class="grid lg:grid-cols-3 md:grid-cols-2 gap-5 sm:grid-cols-2 md:grid-rows-none sm:grid-rows-4"
       >
         <div v-for="(item, index) in products" :key="index">
           <div
@@ -123,7 +121,7 @@ export default {
             @mouseover="item.hover = true"
             @mouseleave="item.hover = false"
           >
-            <div
+            <divz
               class="md:bg-[#FBFBFB] md:p-5 sm:bg-[#F4F4F4] sm:rounded-2xl relative"
             >
               <img class="bg-cover" :src="item.img" alt="img" />
@@ -135,7 +133,7 @@ export default {
                 <button><img src="../assets/search.svg" alt="search" /></button>
                 <button><img src="../assets/like.svg" alt="like" /></button>
               </div>
-            </div>
+            </divz>
 
             <div>
               <h1 class="text-lg text-[#3D3D3D]">{{ item.title }}</h1>
@@ -148,16 +146,21 @@ export default {
       </div>
       <div
         class="sm:hidden md:flex flex gap-3 justify-end absolute md:bottom-[60px] lg:bottom-[200px] xl:bottom-calc-100%-5 right-1"
-      >
-        <div v-for="(item, index) in btns" :key="index">
+      ></div>
+      
+<div class="flex gap-2 justify-end">
+
+  <div v-for="(item, index) in btns" :key="index">
           <button
             class="px-2 py-1 border rounded-md focus:bg-[#46A358] focus:text-white"
           >
             {{ item }}
           </button>
         </div>
-      </div>
+</div>
+
     </div>
+    
   </div>
 </template>
 

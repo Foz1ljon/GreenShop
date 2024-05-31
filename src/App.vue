@@ -25,7 +25,7 @@ export default {
 
 <template>
   <div class="container mb-40">
-    <Auth />
+    <!-- <Auth /> -->
     <Navbar />
     <Main />
     <Section />
